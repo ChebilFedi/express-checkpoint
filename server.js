@@ -13,6 +13,9 @@ console.log(requestTime)
 
 app.use(express.static(__dirname+'/public'))
 
+app.get('/', (req, res) => {
+    res.sendFile(__dirname+'/public/home.html')
+})
 
 app.listen(3000,(err)=>{
     if(err)
